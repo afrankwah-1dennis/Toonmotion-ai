@@ -1,0 +1,24 @@
+TOONMOTION AI — FREE-FIRST SETUP QUICK GUIDE
+
+Automatic choice:
+1) ComfyUI on your own GPU computer (free model / no per-clip API fee)
+2) fal only if the owner turns on ENABLE_PAID_PROVIDER=true
+3) Otherwise it refuses to render instead of charging silently.
+
+ComfyUI workflow requirements:
+- Export from ComfyUI using Save (API Format).
+- Save as workflow.json beside server.js.
+- Replace the text prompt widget value with __PROMPT__.
+- Replace Load Image's image widget value with __IMAGE_FILENAME__.
+- Optional image fields: __IMAGE_SUBFOLDER__, __IMAGE_TYPE__.
+- Workflow output must save a video (videos/gifs output).
+
+Run:
+- Install Node.js 20+
+- Install ComfyUI and a compatible image-to-video model/workflow
+- Copy .env.example to .env
+- npm install
+- npm start
+- Open http://localhost:3000
+
+The free model weights do not provide free cloud GPU. A compatible computer, GPU, storage, electricity and setup are needed. Do not put API keys in the HTML file.
